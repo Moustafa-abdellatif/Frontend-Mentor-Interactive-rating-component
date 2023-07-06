@@ -1,2 +1,8 @@
-# Frontend-Mentor-Interactive-rating-component
-Interactive rating component Frontend Mentor Challenge
+# Frontend Mentor - Interactive rating component
+
+Built By:
+-HTML
+-CSS
+-Jquery
+
+Author: Moustafa A. Abdeellatif

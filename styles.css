@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif !important;
+  transition: all 0.5s ease-in-out;
+}
+:root {
+  --Orange: hsl(25, 97%, 53%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Dark-Blue);
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  /* background-image: linear-gradient(
+    to top,
+    var(--Dark-Blue),
+    var(--Medium-Grey) */
+  /* ); */
+  background-color: var(--Dark-Blue);
+  width: 30%;
+  height: 60%;
+  padding: 30px;
+  border-radius: 25px;
+}
+main img {
+  background-color: var(--Medium-Grey);
+  border-radius: 50%;
+  scale: 1.4;
+  max-width: 50px;
+  padding: 7px;
+  color: var(--Orange);
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+main h1 {
+  color: var(--White);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+main article {
+  color: var(--Medium-Grey);
+  font-size: 18px;
+  margin: 22px auto 15px auto;
+  opacity: 0.8;
+  font-weight: 400;
+}
+main .ratings {
+  color: var(--Medium-Grey);
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rating {
+  color: var(--Light-Grey);
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 50%;
+  padding: 0.8em 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rating:hover {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+/*styles when clicked*/
+.rating:active {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+/*added class with JS to the selected rating*/
+.selected {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+.btn-submit {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--White);
+  background-color: var(--Orange);
+  border: none;
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 2em;
+  display: block;
+  margin: 10px;
+  font-weight: bold;
+}
+.btn-submit:active {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.btn-submit:hover {
+  cursor: pointer;
+  color: var(--Orange);
+  background-color: var(--White);
+}
+
+/* ----------------------thank-you-card ----------------------------------*/
+.thank-you-card {
+  position: absolute;
+  display: none;
+  background-color: var(--Dark-Blue);
+  width: 30%;
+  height: 60%;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--White);
+  z-index: -1;
+}
+h3 {
+  color: var(--Orange);
+  margin: 30px auto;
+  background-color: hsla(217.9, 12.6%, 29.6%, 0.4);
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: normal;
+}
+.thank-you-card p {
+  margin: 20px;
+  line-height: 1.6;
+  color: var(--Medium-Grey);
+}
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--White);
+}
+@media screen and (max-width: 1250px) {
+  main,
+  .thank-you-card {
+    width: 60% !important;
+    height: 70%;
+  }
+}
+@media screen and (max-width: 950px) {
+  main,
+  .thank-you-card {
+    width: 90% !important;
+    height: 70%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 380px) {
+  main {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .thank-you-card {
+    padding-bottom: 0;
+  }
+}
